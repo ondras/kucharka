@@ -14,7 +14,7 @@
 		public function __construct($image_path) {
 			global $user, $pass, $host, $db;
 			$this->image_path = $image_path;
-			parent::__construct("mysql:host=".$host.";dbname=".$db, $user, $pass, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+			parent::__construct("mysql:host=".$host.";dbname=".$db, $user, $pass, array(Pdo\Mysql::ATTR_INIT_COMMAND => "SET NAMES utf8"));
 		}
 
 		public function getFields($table) {
